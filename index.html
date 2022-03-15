@@ -5,39 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suwit Jepang</title>
+    
+    <!-- Icon -->
     <link rel="shortcut icon" href="img/logo.png">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/0b20dfeace.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    <div class="title">
-        <h2>Suwit Jepang</h2>
-    </div>
-
-    <!-- <div class="score">
-        <div class="score-computer">5</div>
-        <div class="score-player">5</div>
-    </div> -->
-
-    <div class="container">
-        <div class="computer">
-            <img src="img/gunting.png" alt="" class="img-comp">
+    <div class="header">
+        <div class="back">
+            <i class="fa-solid fa-arrow-left icon-header"></i>
         </div>
-        <div class="info">MENANG !</div>
-        <div class="player">
-            <ul>
-                <li>
-                    <img src="img/batu.png" class="batu">
-                </li>
-                <li>
-                    <img src="img/gunting.png" class="gunting">
-                </li>
-                <li>
-                    <img src="img/kertas.png" class="kertas">
-                </li>
-            </ul>
+        <div class="title">
+            <h1>Suwit Jepang</h1>
+        </div>
+        <div class="reset">
+            <i class="fa-solid fa-rotate-right icon-header"></i>
         </div>
     </div>
-    
+
+    <main>
+        <div class="score-content">
+            <div class="bot">
+                <i class="fa-solid fa-desktop icon-score"></i>
+            </div>
+            <div class="score">
+                <span class="bot">0</span>
+                <span>:</span>
+                <span class="user">0</span>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-user icon-score"></i>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="computer">
+                <img src="img/gunting.png" class="img-comp">
+            </div>
+            <div class="info">HASIL</div>
+            <div class="player">
+                <ul>
+                    <li>
+                        <img src="img/batu.png" class="batu">
+                    </li>
+                    <li>
+                        <img src="img/gunting.png" class="gunting">
+                    </li>
+                    <li>
+                        <img src="img/kertas.png" class="kertas">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -6,92 +6,105 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #1A1A40;
-    overflow-y: hidden;
+    background-color: #064663;
 }
 
-.title {
-    margin: 20px;
+.header {
+    display: flex;
+    padding-top: 2rem;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.title h2 {
-    text-align: center;
-    color: rgb(165, 159, 159);
-    font-size: 36px;
+.title h1 {
+    color: #EEB76B;
+    font-size: 2rem;
     text-transform: uppercase;
+}
+
+i {
+    font-size: 2rem;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.score-content {
+    width: 100px;
+    height: 250px;
+    margin: 0 auto;
+    top: 220px;
+    margin-left: 100px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.score {
+    background-color: #D89216;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.score span:nth-child(2){
+    transform: rotate(90deg);
+    margin-left: 5px;
 }
 
 .container {
     width: 700px;
-    height: 500px;
     margin: 0 auto;
+    margin-top: 40px;
 }
 
 .computer {
-    position: relative;
-    width: 700px;
-    height: 250px;
-    margin: auto;
+    height: 200px;
     padding-top: 40px;
     background-color: #541212;
-    border-radius: 30px 30px 0 0 ;
-}
-
-.player {
-    position: relative; 
-    width: 700px;
-    height: 250px;
-    margin: 0 auto;
-    margin-top: 10px;
-    background-color: #8B9A46;
-    border-radius: 0 0 30px 30px;
+    border-radius: 30px 30px 0 0;
 }
 
 .info {
-    position: absolute;
     width: 200px;
-    height: 100px;
-    top: 50%;
-    left: 50%;
-    margin-top: 2%;
-    transform: translate(-50%,-50%);
-    border: 5px solid yellow;
-    border-radius: 30px;
-    color: #EEEEEE;
-    font-size: 26px;
-    text-align: center;
-    line-height: 90px;
-    background-color: #2D4263;
-    z-index: 999;
-}
-
-.score {
-    position: absolute;
-    border: 1px solid red;
-    padding: 20px;
-    left: 200px;
-    top: 270px;
-}
-
-.score-computer,
-.score-player {
-    border: 1px solid ;
-    color: white;
-    width: 40px;
     height: 50px;
-    text-align: center;
-    line-height: 50px;
-    margin: 0 auto;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px ;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: #041C32;
+    border: 3px solid #FFFF00;
+}
+
+.player {
+    height: 200px;
+    background-color: #8B9A46;
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 ul {
-    padding-top: 80px;
-    padding-left: 95px;
+    display: flex;
+    margin: 0 auto;
 }
 
 li {
-    display: inline-block;
-    margin: 0 20px;
+    list-style: none;
+    margin: 10px;
 }
 
 img {
@@ -108,76 +121,42 @@ img {
     background-color: #4E9F3D;
 }
 
-.gunting, 
-.batu, 
-.kertas {
-    transition: .3s;
-    position: relative;
-    top: 0;
-    cursor: pointer;
-}
-
-.gunting:hover,
-.batu:hover, 
-.kertas:hover {
-    opacity: .8;
-}
-
-.gunting:active,
-.batu:active, 
-.kertas:active {
-    top: 2px;
-}
-
 @media (max-width: 576px) {
-    .title {
-        margin: 20px;
+    .header {
+        width: 100%;
+        
     }
 
-    .title h2 {
-        font-size: 24px;
-    }
-
-    .container {
+    .container{
         width: 90%;
-        margin: 0 5%;
+        margin-top: 0;
     }
 
-    .computer {
-        width: 100%;
-        height: 40%;
-        padding-top: 10%;
+    .score-content {
+        width: 300px;
+        height: 200px;
+        margin: 0 auto;
+        position: unset;
+        flex-direction: row;
     }
 
-    .player {
-        width: 100%;
-        height: 55%;
-    }
-    
-    .info {
-        width: 50%;
-        height: 10%;    
-        margin-top: -10%;
-        border: 3px solid yellow;
-        border-radius: 15px;
-        font-size: 20px;
-        line-height: 50px;
+    .score {
+        width: 150px;
+        height: 50px;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
-    ul {
-        padding-top: 50px;
-        padding-left: 0px;
+    .score span {
+        font-size: 2rem;
+        font-weight: 600;
     }
 
-    li {
-        margin: 0 4%;
-    }
-
-    li:nth-child(3){
-        margin: 0 28%;
+    .score span:nth-child(2){
+        transform: unset;
     }
 
     img {
-        width: 100px;
+        width: 80px;
     }
 }
