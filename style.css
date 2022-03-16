@@ -26,6 +26,21 @@ i {
     font-size: 2rem;
 }
 
+.back:hover, 
+.reset:hover {
+    cursor: pointer;
+}
+
+.spin {
+    animation: rot .5s ease-in;
+}
+
+@keyframes rot {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 main {
     width: 90%;
     margin: 0 auto;
@@ -119,6 +134,28 @@ img {
 
 .img-comp {
     background-color: #4E9F3D;
+}
+
+.gunting, 
+.batu, 
+.kertas {
+    transition: .3s;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+}
+
+.gunting:hover, 
+.batu:hover, 
+.kertas:hover {
+    opacity: .8;
+}
+
+.gunting:active, 
+.batu:active, 
+.kertas:active {
+    opacity: .6;
+    top: 2px;
 }
 
 @media (max-width: 576px) {

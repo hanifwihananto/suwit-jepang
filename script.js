@@ -2,6 +2,10 @@ const gunting = document.querySelector('.gunting');
 const batu = document.querySelector('.batu');
 const kertas = document.querySelector('.kertas');
 const info = document.querySelector('.info');
+const scorePlayer = document.querySelector('.score .user');
+const scoreComp = document.querySelector('.score .bot');
+let j = 0;
+let k = 0;
 
 // Menentukan pilihan computer
 function getPilihanComputer(){
@@ -60,7 +64,31 @@ play.forEach((p) => {
             const imgComp = document.querySelector('.img-comp');
             imgComp.setAttribute('src', 'img/' + pilihanComputer + '.png');
             info.innerHTML = hasil;
+
+            if(hasil == 'MENANG !'){
+                j += 1;
+                scorePlayer.innerHTML = j;
+            } else if (hasil == 'KALAH !'){
+                k += 1;
+                scoreComp.innerHTML = k;
+            }
+
         }, 500)
         info.innerHTML = '';
-    })
-})
+    });
+});
+
+// Fungsi Reset
+const reset = document.querySelector('.reset');
+reset.addEventListener('click', () => {
+    reset.classList.add('spin');
+    setTimeout(() => {
+        reset.classList.remove('spin');
+    }, 500);
+
+    // Reset Score
+    const scorePlayer = document.querySelector('.score .user');
+    const scoreComp = document.querySelector('.score .bot');
+    scoreComp.innerHTML = 0;
+    scorePlayer.innerHTML = 0;
+});
