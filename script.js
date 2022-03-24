@@ -91,4 +91,6 @@ reset.addEventListener('click', () => {
     const scoreComp = document.querySelector('.score .bot');
     scoreComp.innerHTML = 0;
     scorePlayer.innerHTML = 0;
+    j = 0;
+    k = 0;
 });
